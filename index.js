@@ -47,6 +47,7 @@ app.use(cookieParser());
 
 const allowedOrigins = [
   "https://hospital-management-frontend-fb5m.vercel.app",  // "https://your-frontend.vercel.app"
+  "https://hospital-management-backend-steel.vercel.app",
   "http://localhost:5173"    // for local testing
 ];
 
