@@ -45,9 +45,11 @@ const loginStaffController = async (req, res) => {
         );
 
         res.cookie('token', token, {
-            httpOnly: true,
-            // secure: false,
-            secure: true,
+            httpOnly: false,
+            path:'/',
+            // secure: process.env.NODE_ENV === 'production',  // Use true in production
+            // secure: true,  // Use true in production
+            // sameSite: 'None'
             maxAge: 1000 * 60 * 60 * 1
         })
         // res.cookie("token", token, {
