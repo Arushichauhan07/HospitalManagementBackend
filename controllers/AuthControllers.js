@@ -174,10 +174,9 @@ const loginController = async (req, res) => {
         // Set token as HTTP-only cookie
         res.cookie('token', token, {
             httpOnly: false,
-            path:'/',
             // secure: process.env.NODE_ENV === 'production',  // Use true in production
-            // secure: true,  // Use true in production
-            // sameSite: 'None',
+            secure: true,  // Use true in production
+            sameSite: 'None',
             maxAge: 1000 * 60 * 60  // 1 hour expiration
         });
 
