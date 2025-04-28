@@ -46,7 +46,7 @@ app.use(fileUpload());
 app.use(cookieParser());
 
 const allowedOrigins = [
-  process.env.FRONTEND_URL,  // "https://your-frontend.vercel.app"
+  "https://hospital-management-frontend-fb5m.vercel.app",  // "https://your-frontend.vercel.app"
   "http://localhost:5173"    // for local testing
 ];
 
