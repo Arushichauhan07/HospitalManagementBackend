@@ -50,7 +50,7 @@ const allowedOrigins = [
   // "https://hospital-management-backend-steel.vercel.app",
   "http://localhost:5173",  // for local testing
     process.env.FRONTEND_URL,
-    process.env.Backend_URL
+    process.env.BACKEND_URL
 ];
 
 app.use(cors({
