@@ -22,7 +22,7 @@ const createBloodEntry = async (req, res) => {
 
     if (existingBlood) {
       // If the blood type exists, update the units
-      existingBlood.units += Number(units); // Add new units to the existing ones
+      existingBlood.units = Number(existingBlood.units) + Number(units);  // Add new units to the existing ones
       await existingBlood.save();
 
       res.status(200).json({
