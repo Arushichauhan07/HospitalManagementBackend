@@ -33,13 +33,10 @@ const createMessage = async (req, res) => {
 
         console.log(req.user)
         const sender = req.user._id; 
-        console.log("sender", sender)
 
 
         const newMessage = new Messages({ org_id, sender, receiver, subject, message });
         await newMessage.save();
-
-        console.log("newMessage", newMessage)
 
         await Patient.updateMany(
             { _id: { $in: [sender, receiver] } },

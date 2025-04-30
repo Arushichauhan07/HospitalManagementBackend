@@ -198,7 +198,7 @@ const connectToDb = async () => {
     });
 
     socket.on("meal-plan-assigned", (data) => {
-      // console.log("Received 'assign-client' event with data:", data);
+      console.log("Received 'assign-client' event with data:", data);
 
       const sendUserSocket = onlineUsers.get(data.to);
 

@@ -6,12 +6,14 @@ let otpStore = {}; // Store OTPs temporarily
 exports.sendOtp = async (req, res) => {
   const { email } = req.body;
 
+  // console.log("email", email)
   if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
     return res.status(400).json({ error: "Invalid email address" });
   }
 
   // Generate 6-digit OTP
   const otp = Math.floor(100000 + Math.random() * 900000);
+  // console.log("otp", otp)
   otpStore[email] = otp;
 
   const mailOptions = {
